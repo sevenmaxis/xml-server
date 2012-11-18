@@ -21,7 +21,7 @@ class Device
         response.status = 201
 
         begin
-
+          
           Xml.update({"device" => request.params["device"]})
           response.body = [{ :success => true }.to_json]
           

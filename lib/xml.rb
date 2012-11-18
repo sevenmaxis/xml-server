@@ -1,3 +1,4 @@
+require 'json'
 require 'xml/mapping'
 require "rexml/document"
 require File.join(File.dirname(__FILE__), '..', 'lib', 'patch_hash.rb')
@@ -38,12 +39,18 @@ module Xml
     end
 
     def update(to_update)
-      puts ""
       updated = false
-      puts "before updated: #{updated}"
+      puts "++++++++++++++++++++++++++++++"
+      puts "to_update: #{to_update}"
+      puts "@@map: #{@@map}"
 
       @@map.nested_merge(to_update) do |key, xpath, new_value|
         updated = true
+        puts "=================================="
+        puts "key: #{key}"
+        puts "new_value is nul" unless new_value
+        puts "new_value: #{new_value}"
+        puts "xpath: #{xpath}"
         XML::XXPath.new(xpath).first(@@doc).text = new_value
       end
 

@@ -33,8 +33,8 @@ describe Device do
 
     before do
       require File.expand_path("../../lib/xml", __FILE__)
-      path = File.join(File.dirname(__FILE__), '..' '/lib', 'task.xml')
-      @update_path = File.join(File.dirname(__FILE__), '..', 'lib', 'update_task.xml')
+      path = File.join(File.dirname(__FILE__), 'task.xml')
+      @update_path = File.join(File.dirname(__FILE__), 'update_task.xml')
       FileUtils.cp path, @update_path
       Xml.set_xml(@update_path)
     end

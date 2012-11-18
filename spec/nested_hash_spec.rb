@@ -71,4 +71,41 @@ describe Hash do
     k['device']['numbers'][0]['number'] = 'foo'
     hash['device']['numbers'][0]['number'].should == "16508045104"
   end
+
+  it "shouldn't merge on nil value" do
+    h = {
+      "device" => {
+        "username" => "6504335037",
+        "name" => "",
+        "location" => "Shared",
+        "numbers" => [
+          {
+            "number" => "16508045104",
+            "vnum_id" => "0",
+            "starcode" => "0",
+            "ring_pattern" => "2"
+          },
+          {
+            "number" => "16504335037",
+            "vnum_id" => "1",
+            "starcode" => "1",
+            "ring_pattern" => "0"
+          },
+          {
+            "number" => "16504750480",
+            "vnum_id" => "3",
+            "starcode" => "3",
+            "ring_pattern" => "0"
+          }
+        ]
+      }
+    }
+    k = { "device" => nil }
+
+    a = []
+    h.nested_merge(k) do |key, oldval, newval|
+      a += [key, oldval, newval]
+    end
+    a.length.should == 0
+  end
 end

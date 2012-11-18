@@ -16,9 +16,9 @@ class Hash
 
   def nested_merge!(other_hash, &block)
     other_hash.each do |key, value|
-      next unless has_key?(key)
-
       curr_value = self[key]
+
+      next if value.nil? or curr_value.nil?
 
       if Hash === curr_value and Hash === value
         self[key] = curr_value.nested_merge(value, &block)

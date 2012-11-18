@@ -3,7 +3,7 @@ require File.expand_path("../../lib/xml", __FILE__)
 describe Xml do
   
   before do
-    @path = File.join(File.dirname(__FILE__), '..' '/lib', 'task.xml')
+    @path = File.join(File.dirname(__FILE__), 'task.xml')
   end
 
   it "should load REXML document" do
@@ -93,7 +93,7 @@ describe Xml do
   end
 
   it "should update xml documetn" do
-    update_path = File.join(File.dirname(__FILE__), '..', 'lib', 'update_task.xml')
+    update_path = File.join(File.dirname(__FILE__), 'update_task.xml')
     FileUtils.cp @path, update_path
     
     doc = Xml.set_xml(update_path)
