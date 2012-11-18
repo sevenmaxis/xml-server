@@ -39,18 +39,12 @@ module Xml
     end
 
     def update(to_update)
-      updated = false
-      puts "++++++++++++++++++++++++++++++"
+      puts "================================="
       puts "to_update: #{to_update}"
-      puts "@@map: #{@@map}"
+      updated = false
 
       @@map.nested_merge(to_update) do |key, xpath, new_value|
         updated = true
-        puts "=================================="
-        puts "key: #{key}"
-        puts "new_value is nul" unless new_value
-        puts "new_value: #{new_value}"
-        puts "xpath: #{xpath}"
         XML::XXPath.new(xpath).first(@@doc).text = new_value
       end
 
