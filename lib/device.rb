@@ -18,14 +18,10 @@ class Device
 
       elsif request.post?
 
-        response.status = 201
-
         begin
-
-          puts "---request-------------"
-          puts request.params
-          puts JSON.parse(request.params.keys.first)
           Xml.update(JSON.parse(request.params.keys.first))
+
+          response.status = 201
           response.body = [{ :success => true }.to_json]
           
         rescue XML::XXPathError, XML::Mapping::SingleAttributeNode::NoAttrValueSet

@@ -42,7 +42,7 @@ describe Device do
     it "/device post with invalid params should'n change xml" do
       params = { :device => { :slkjfdsjfds => "eruewur" } }
       response = @request.post("/device", params: params.to_json)
-      response.status.should == 201
+      response.status.should == 404
       hash = { :success => false }
       response.body.should == hash.to_json
     end

@@ -39,8 +39,6 @@ module Xml
     end
 
     def update(to_update)
-      puts "================================="
-      puts "to_update: #{to_update}"
       updated = false
 
       @@map.nested_merge(to_update) do |key, xpath, new_value|
