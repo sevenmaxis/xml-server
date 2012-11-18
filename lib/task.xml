@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<CustomerResponse xmlns='http://corp.ooma.internal/namespaces/customer' ProcTime='287' Action='GET_ADMUSER'>
+  <User PK='nxseuxhpdagiwipsbhjephprgbfsmdii' CustomerPK='yka5bkqu3hq8t5afcv2beryrtde63vxn'>
+    <UserID>
+      <Identification FirstName='BOBBY' LastName='BIS' EmailAddress='bobby.biswal@oomanetworks.com' CommonName='BOBBY BIS'/>
+      <Security MaxLogin='1' MaxAttempts='8' MaxInactivity='60' LastAccess='2009-06-09T00:40:04.295Z'/>
+    </UserID>
+    <UserInfo Master='true'/>
+    <Device PK='85cnavzdtvsfyh2jfa5mjn5pqq4mdi4n'>
+      <Privileged>
+        <Identification FirstName='' LastName='' Location='Hidden' ID='' CommonName=''/>
+        <Security/>
+      </Privileged>
+      <DeviceID Name='some name' BlockCID='true' DefaultDID='123456' Monitor='true' RNA='24' Type='Virtual' VMDID='6508045104' VMPin='200804221349435796508045104@bam.ooma.com'/>
+      <DID PK='x7q6kd3phdq6i5cn8mu43bhjdy6feb3h' E164='16508045104' VNumID='0' CName='BOBBY BISWAL' StarCode='0' MultiRingLocal='false' Monitor='true' RNA='24' IntlCIDAlias='0' VmAlias='0' RingPattern='2' RingTone=''>
+      </DID>
+      <DID PK='ykniyx95ezua9j58xefxkn9vu7ksq4bs' E164='16504335037' VNumID='1' CName='Bobby Biswal' StarCode='1' MultiRingLocal='false' Monitor='true' RNA='24' IntlCIDAlias='0' VmAlias='0' RingPattern='0' RingTone=''>
+      </DID>
+      <DID PK='enx76myhqq5fkptp2z9jkyvd5b3rkg6m' E164='16504750480' VNumID='3' CName='Bobby B' StarCode='3' MultiRingLocal='false' Monitor='true' RNA='24' IntlCIDAlias='0' VmAlias='0' RingPattern='0' RingTone=''>
+      </DID>
+    </Device>
+  </User>
+</CustomerResponse>

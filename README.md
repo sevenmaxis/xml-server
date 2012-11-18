@@ -12,6 +12,10 @@ And then execute:
 
     $ bundle install
 
+Run rack application as:
+
+    rackup -Ilib
+
 ## Usage
 
 Get json device
