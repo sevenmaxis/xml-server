@@ -29,22 +29,6 @@ class Hash
     self
   end
 
-  # def nested_dup
-  #   duplicate = self.dup
-  #   duplicate.each_pair do |k,v|
-  #     dv = duplicate[k]
-      
-  #     if Hash === dv and Hash === v
-  #       duplicate[k] = dv.nested_dup
-  #     elsif Array === dv and Array === v
-  #       duplicate[k] = dv.map { |m| m.nested_dup }
-  #     else
-  #       duplicate[k] = v
-  #     end
-  #   end
-  #   duplicate
-  # end
-
   def nested_dup
     duplicate = self.dup
     duplicate.each_pair do |k,v|      
