@@ -41,7 +41,7 @@ describe Device do
 
     it "/device post with invalid params should'n change xml" do
       params = { :device => { :slkjfdsjfds => "eruewur" } }
-      response = @request.post("/device", params: params)
+      response = @request.post("/device", params: params.to_json)
       response.status.should == 201
       hash = { :success => false }
       response.body.should == hash.to_json
@@ -53,7 +53,7 @@ describe Device do
           :username => "12345678", :name => "foo", :location => "hiden" 
         }
       }
-      response = @request.post("/device", params: params)
+      response = @request.post("/device", params: params.to_json)
       response.status.should == 201
       hash = { :success => true}
       response.body.should == hash.to_json
