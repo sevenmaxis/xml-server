@@ -4,17 +4,13 @@ xml server
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Run in command line:
 
-    gem 'svitla'
+    git clone git@github.com:sevenmaxis/xml-server.git
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install svitla
+    $ bundle install
 
 ## Usage
 
