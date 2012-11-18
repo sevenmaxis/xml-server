@@ -1,6 +1,6 @@
 # Svitla
 
-TODO: Write a gem description
+xml server
 
 ## Installation
 
@@ -18,12 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Get json device
 
-## Contributing
+    curl http://localhost:9292/device
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Post json device
+
+    curl -X POST -d '{"device":{"username":"123456","name":"some name","location":"Hidden"}}' http://localhost:9292/device
