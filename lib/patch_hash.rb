@@ -31,17 +31,15 @@ class Hash
 
   def nested_dup
     duplicate = self.dup
+
     duplicate.each_pair do |k,v|      
-      if Hash === v
-        duplicate[k] = v.nested_dup
-      elsif Array === v
-        duplicate[k] = v.map { |m| m.nested_dup }
-      else
-        duplicate[k] = v
-      end
+      duplicate[k] = case v
+        when Hash  then v.nested_dup
+        when Array then v.map(&:nested_dup)
+        else            v end
     end
+
     duplicate
   end
-
 end
 

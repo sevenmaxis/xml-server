@@ -17,7 +17,7 @@ module Xml
 
     def set_xml(file_path)
       @@xml_file = file_path
-      @@doc = REXML::Document.new( File.new(@@xml_file) ).tap { setup_map }
+      @@doc = REXML::Document.new( File.new(@@xml_file) ).tap{ setup_map }
     end
 
     def get_xml

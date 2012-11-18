@@ -12,7 +12,7 @@ And then execute:
 
     $ bundle install
 
-Run rack application as:
+Run rack application in the same directory as:
 
     rackup -Ilib
 
